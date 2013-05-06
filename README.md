@@ -12,7 +12,7 @@ Hero-slideshow is a jQuery slideshow plugin written for the website of the PBS d
 ### Usage
 
 Write slideshow markup as shown:
-
+```html
 	<div class="hero-ctn">
 		<div class="slides">
 			<div class="slide">
@@ -51,4 +51,4 @@ Write slideshow markup as shown:
 			</div>
 		</div>
 	</div>
-
+```
