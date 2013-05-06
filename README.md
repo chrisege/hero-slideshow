@@ -5,6 +5,7 @@
 Hero-slideshow is a jQuery slideshow plugin written for the website of the PBS documentary "10 Buildings That Changed America." It will automatically display images to fill the width of the browser, up to 1600 pixels wide. 
 
 ### Features
+* responsive design. The slideshow resizes to 100% width (up to 1600px) and is intended to be used in a responsive design setting.
 * uses CSS3 Transitions where available, with jQuery Animate as a fallback for Internet Explorer, etc.
 * deferred loading of images. The heroic images that are used in this slideshow can cause pages to be quite large. In order to make the page display more quickly, the images are loaded after document.ready. (this technique could probably be improved upon).
 * serve a smaller image to smaller screens. Smaller screens get a half-size version of the image.
@@ -52,3 +53,17 @@ Write slideshow markup as shown:
 		</div>
 	</div>
 ```
+
+and initialize the slideshow on document.ready:
+
+```javascript
+jQuery('document').ready(function($){
+	$('.hero-ctn').heroSlideshow();
+});
+```
+
+### Dependencies
+
+As a jQuery plugin, this slideshow requires jQuery. May work with zepto, but it hasn't been tested.
+
+As written, the markup does rely upon [Twitter Bootstrap](http://twitter.github.io/bootstrap/) for its responsive grid system and [Font Awesome](http://fortawesome.github.io/Font-Awesome/) for navigation icons, but it could easily be rewritten to avoid that dependency.
